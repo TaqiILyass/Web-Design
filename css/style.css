@@ -132,6 +132,17 @@ body {
     border: none;
     margin-top: 10px;
     display: none;
+    position: relative;
+}
+
+.header-area .toggel-menu.menu-active::before {
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(119, 119, 119, 0.5) transparent;
+    position: absolute;
+    top: 25px;
+    left: 10px;
 }
 
 .header-area .toggel-menu span {
@@ -162,8 +173,32 @@ body {
   .header-area .links {
     display: none;
   }
-  .header-area .toggel-menu {
+
+  .header-area .links.open {
     display: block;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    text-align: left;
+    background-color: rgba(119, 119, 119, 0.5);
+    backdrop-filter: blur(5px); 
+  }
+
+  .header-area .links.open li {
+    display: block;
+    margin: 10px;
+  }
+
+  .header-area .links.open li a {
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  .header-area .toggel-menu {
+    display: inline-block;
   }
 }
 /* End Landing Page */
